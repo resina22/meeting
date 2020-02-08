@@ -1,0 +1,44 @@
+.topbar {
+  height: 53px !important;
+  padding: 2.5px;
+  margin: 0 0 5px 0;
+  border-style: solid;
+  border-width: 1px;
+  border-color: transparent transparent rgba(132, 132, 132, 0.2) transparent;
+}
+
+.container-topbar {
+  display: flex;
+}
+
+.btn-profile {
+  position: relative;
+  text-decoration: none;
+}
+
+.title {
+  position: relative;
+  top: 10px;
+  margin: 0 0 0 2%;
+  height: 46px;
+}
+
+.img-profile {
+  border: 1px solid rgba(132, 132, 132, 0.4);
+  border-radius: 50%;
+  height: 45px;
+  width: 45px;
+  object-fit: cover;
+  clear: both;
+}
+
+.elseImgProfile {
+  padding: 10px;
+  border: 1px solid rgba(132, 132, 132, 0.4);
+  color: #848484;
+  border-radius: 50%;
+}
+
+.btn-options {
+  background-color: transparent;
+}

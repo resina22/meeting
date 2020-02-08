@@ -1,0 +1,43 @@
+<div
+  class="topbar"
+  fxFlexFill
+  fxFlexOffset="21.8%"
+  fxFlexOffset.sm="0"
+  fxFlexOffset.xs="0"
+  fxFlex="60%"
+  fxFlex.sm="100%"
+  fxFlex.xs="100%"
+  fxLayoutAlign="space-between"
+  gdAreas="header header"
+>
+  <div
+    fxFlex="90%"
+    class="container-topbar"
+  >
+    <a routerLink="/profile" class="btn-profile">
+      <img
+        class="img-profile"
+        *ngIf="imgProfile;else elseImgProfile"
+        [src]=imgProfile
+      >
+      <ng-template #elseImgProfile>
+        <mat-icon class="elseImgProfile">person</mat-icon>
+      </ng-template>
+    </a>
+    <h2 class="title">{{title}}</h2>
+  </div>
+
+  <div
+    fxFlex="40px"
+    fxLayoutAlign="end"
+  >
+    <button
+      mat-icon-button
+      aria-label="Opções"
+      (click)=toggle()
+      class="btn-options"
+    >
+      <mat-icon>build</mat-icon>
+    </button>
+  <div>
+</div>

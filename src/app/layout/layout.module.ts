@@ -6,11 +6,13 @@ import { FlexLayoutModule } from '@angular/flex-layout';
 import { MatButtonModule } from '@angular/material/button';
 
 import { AppRoutingModule } from '../app-routing.module';
+import { TopbarComponent } from './topbar/topbar.component';
 import { ToolbarComponent } from './toolbar/toolbar.component';
 
 @NgModule({
   declarations: [
-    ToolbarComponent
+    ToolbarComponent,
+    TopbarComponent,
   ],
   imports: [
     CommonModule,
@@ -22,6 +24,7 @@ import { ToolbarComponent } from './toolbar/toolbar.component';
   exports: [
     ToolbarComponent,
     AppRoutingModule,
+    TopbarComponent,
   ]
 })
 export class LayoutModule { }
