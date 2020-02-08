@@ -1,0 +1,22 @@
+.toolbar {
+  background-color: #FFF;
+}
+
+.container {
+  background-color: #FFF;
+  height: calc(93vh - 40px) !important;
+  overflow: hidden;
+}
+
+@media screen and (max-width: 360px) {
+  .container {
+    height: calc(91vh - 40px) !important;
+    top: 0px;
+  }
+}
+
+@media (orientation: landscape) {
+  .container {
+    height: calc(82vh - 40px) !important;
+  }
+}
