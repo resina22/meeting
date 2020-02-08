@@ -1,0 +1,97 @@
+<div
+  class="toolbar"
+  fxLayout="column"
+  fxLayout.xs="row wrap"
+  fxLayout.sm="row wrap"
+  fxLayoutAlign="flex-start"
+  fxLayoutAlign.xs="center center"
+  fxLayoutAlign.sm="center center"
+>
+  <div
+    fxFlexFill
+    fxFlex="100%"
+    fxFlex.xs="25%"
+    fxFlex.sm="25%"
+    fxLayoutAlign="center center"
+  >
+    <a
+      routerLink="/feed"
+      routerLinkActive="active"
+      #feed=routerLinkActive
+      mat-icon-button
+      class="btn"
+    >
+      <mat-icon
+        [color]="feed.isActive ? 'accent' : ''"
+        aria-hidden="false"
+        aria-label="Página inicial"
+      >dashboard</mat-icon>
+    </a>
+  </div>
+
+  <div
+    fxFlexFill
+    fxFlex="100%"
+    fxFlex.xs="25%"
+    fxFlex.sm="25%"
+    fxLayoutAlign="center center"
+  >
+    <a
+      routerLink="/search"
+      routerLinkActive="active"
+      #search=routerLinkActive
+      mat-icon-button
+      class="btn"
+    >
+      <mat-icon
+        [color]="search.isActive ? 'accent' : ''"
+        aria-hidden="false"
+        aria-label="Encontrar pessoas"
+      >explore</mat-icon>
+    </a>
+  </div>
+
+  <div
+    fxFlexFill
+    fxFlex="100%"
+    fxFlex.xs="25%"
+    fxFlex.sm="25%"
+    fxLayoutAlign="center center"
+  >
+    <a
+      routerLink="/chat"
+      routerLinkActive="active"
+      #chat=routerLinkActive
+      mat-icon-button
+      class="btn"
+    >
+      <mat-icon
+        [color]="chat.isActive ? 'accent' : ''"
+        aria-hidden="false"
+        aria-label="Chat"
+      >chat_bubble_outline</mat-icon>
+    </a>
+  </div>
+
+  <div
+    fxFlexFill
+    fxFlex="100%"
+    fxFlex.xs="25%"
+    fxFlex.sm="25%"
+    fxLayoutAlign="center center"
+  >
+    <a
+      routerLink="/notification"
+      routerLinkActive="active"
+      #notification=routerLinkActive
+      mat-icon-button
+      class="btn"
+    >
+      <mat-icon
+        [color]="notification.isActive ? 'accent' : ''"
+        aria-hidden="false"
+        aria-label="Notificações"
+      >notifications</mat-icon>
+    </a>
+  </div>
+</div>
