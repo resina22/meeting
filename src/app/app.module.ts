@@ -10,12 +10,14 @@ import { environment } from '../environments/environment';
 import { AppRoutingModule } from './app-routing.module';
 import { LayoutModule } from './layout/layout.module';
 import { AppComponent } from './app.component';
+import { FeedModule } from './feed/feed.module';
 
 @NgModule({
   declarations: [
     AppComponent,
   ],
   imports: [
+    FeedModule,
     LayoutModule,
     BrowserModule,
     AppRoutingModule,
