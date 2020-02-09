@@ -22,8 +22,8 @@ import { ToolbarComponent } from './toolbar/toolbar.component';
     AppRoutingModule,
   ],
   exports: [
-    ToolbarComponent,
     AppRoutingModule,
+    ToolbarComponent,
     TopbarComponent,
   ]
 })
