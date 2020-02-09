@@ -2,7 +2,4 @@
 @import './assets/icon.css';
 
 @import '~normalize.css';
-
-body, html {
-  overflow: hidden;
-}
+@import './theme.scss';
