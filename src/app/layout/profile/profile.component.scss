@@ -1,0 +1,31 @@
+.profile {
+  margin: 0px 0px 10px 0px;
+}
+
+.name-profile > a > h2 {
+  padding: 0px 0px 0px 3px;
+  margin: 0px;
+}
+
+.name-profile > a,
+.name-profile > a:hover,
+.name-profile > a:active {
+  text-decoration: none;
+  color: #000;
+}
+
+.img-profile {
+  border: 1px solid rgba(132, 132, 132, 0.4);
+  border-radius: 50%;
+  height: 40px;
+  width: 40px;
+  object-fit: cover;
+  clear: both;
+}
+
+.elseImgProfile {
+  padding: 10px;
+  border: 1px solid rgba(132, 132, 132, 0.4);
+  color: #848484;
+  border-radius: 50%;
+}
