@@ -1,0 +1,29 @@
+.btn {
+  background-color: transparent;
+  color: #FFF;
+  margin: 0 10px 0 0;
+}
+
+.title {
+  background-color: #A4A4A4;
+  color: #FFF;
+}
+
+.profile {
+  height: 44px;
+}
+
+.profile>img {
+  position: relative;
+  top: 3px;
+  margin: 0 auto;
+  width: 39px;
+  height: 39px;
+  border-radius: 50%;
+}
+
+.name,
+.status {
+  padding: 0px;
+  margin: 0px;
+}

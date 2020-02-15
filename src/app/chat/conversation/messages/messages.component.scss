@@ -1,0 +1,75 @@
+.conversations {
+  overflow: auto;
+  max-height: calc(100% - 100px) !important;
+  min-height: calc(100% - 100px) !important;
+}
+
+.list-find-contact {
+  overflow: auto;
+  max-height: calc(93% - 67px) !important;
+  min-height: calc(93% - 67px) !important;
+}
+
+.balloon  {
+  margin: 10px;
+  position: relative;
+  min-height: 10px;
+  min-width: 100px;
+  padding: 10px;
+  border-radius: 10px;
+  background: #FFF;
+  background-color: #ECEFF1;
+}
+
+.left-balloon {
+  float: left;
+  left: 0px;
+}
+
+.balloon.left-balloon::before {
+  content: '';
+  display: inline-block;
+  position: absolute;
+  border-radius: 50% 50% 0% 50%;
+  width: 20px;
+  height: 20px;
+  transform: rotate(130deg);
+  left: -1px;
+  bottom: 3px;
+  background-color: #ECEFF1;
+}
+
+.right-balloon {
+  float: right;
+  right: 0px;
+}
+
+.balloon.right-balloon::after {
+  content: '';
+  display: inline-block;
+  position: absolute;
+  border-radius: 50% 50% 0% 50%;
+  width: 20px;
+  height: 20px;
+  transform: rotate(-40deg);
+  background-color: #ECEFF1;
+  right: -1px;
+  bottom: 3px;
+}
+
+.date-send {
+  margin: 0px !important;
+  text-align: right;
+  color: #848484;
+}
+
+.check {
+  padding: 0 0 0 2px;
+  color: #848484;
+  position: relative !important;
+  top: 5px !important;
+}
+
+.checked {
+  color: #58D3F7;
+}

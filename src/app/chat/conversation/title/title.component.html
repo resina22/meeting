@@ -1,0 +1,47 @@
+<div
+  fxLayoutAlign="start center"
+  fxLayoutGap="20px"
+  fxLayout="row"
+  class="title"
+>
+  <div
+    fxFlex="25px"
+  >
+    <a
+      mat-icon-button
+      class="btn"
+      aria-label="Voltar"
+      routerLink="/chat"
+      routerLinkActive="active"
+    >
+      <mat-icon>keyboard_backspace</mat-icon>
+    </a>
+  </div>
+
+  <div
+    fxFlex="30px"
+    class="profile"
+  >
+    <img src="https://abrilsuperinteressante.files.wordpress.com/2016/09/super_imgcontato_com_natureza.jpg">
+  </div>
+
+  <div
+    fxFlex="83%"
+  >
+    <h3 class="name">Nome</h3>
+    <small status="status">Online</small>
+  </div>
+
+  <div>
+    <button
+      mat-icon-button aria-label="Opções"
+      [matMenuTriggerFor]="opcoes"
+      class="btn"
+    >
+      <mat-icon>more_vert</mat-icon>
+    </button>
+    <mat-menu #opcoes="matMenu">
+      <button mat-menu-item>Excluir</button>
+    </mat-menu>
+  </div>
+</div>
