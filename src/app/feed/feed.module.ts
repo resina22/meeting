@@ -11,8 +11,8 @@ import { SharedModule } from '../shared/shared.module';
 import { MediaComponent } from './media/media.component';
 import { FeedRoutingModule } from './feed-routing.module';
 import { ActionComponent } from './action/action.component';
-import { ProfileComponent } from './profile/profile.component';
 import { ContentComponent } from './content/content.component';
+import { ProfileModule } from '../layout/profile/profile.module';
 
 @NgModule({
   declarations: [
@@ -20,12 +20,12 @@ import { ContentComponent } from './content/content.component';
     MediaComponent,
     ActionComponent,
     ContentComponent,
-    ProfileComponent,
   ],
   imports: [
     CommonModule,
     SharedModule,
     MatIconModule,
+    ProfileModule,
     MatButtonModule,
     FlexLayoutModule,
     MatTooltipModule,

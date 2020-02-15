@@ -1,0 +1,21 @@
+.card-image {
+  height: 250px;
+  border-color: transparent transparent rgba(132, 132, 132, 0.2) transparent;
+}
+
+.card-image>img {
+  height: 100%;
+  width: 100%;
+  display: block;
+  object-fit: cover;
+}
+
+.mat-chip-list {
+  position: relative;
+  bottom: 35px;
+}
+
+.mat-chip {
+  color: #FFF;
+  background-color: rgba(0, 0, 0, 0.8)!important;
+}

@@ -1,0 +1,16 @@
+.container {
+  height: 100%;
+  padding: 0 5px;
+  overflow: auto;
+}
+
+.interest {
+  overflow: hidden;
+  width: 98%;
+  height: auto;
+  margin: 5px auto;
+  border-width: 1px;
+  border-style: solid;
+  padding: 5px;
+  border-color: transparent transparent rgba(132, 132, 132, 0.2) transparent;
+}

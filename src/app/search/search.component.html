@@ -1,1 +1,10 @@
-<p>search works!</p>
+<div class="container">
+  <div
+    *ngFor="let interest of interests"
+    class="interest"
+  >
+    <app-profile></app-profile>
+    <app-content></app-content>
+    <app-action></app-action>
+  </div>
+</div>
