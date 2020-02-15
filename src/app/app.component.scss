@@ -1,10 +1,10 @@
 .toolbar {
-  background-color: #FFF;
+  background-color: #FFF !important;
 }
 
 .container {
+  height: calc(87vh - 40px) !important;
   background-color: #FFF;
-  height: calc(93vh - 40px) !important;
   overflow: hidden;
 }
 
