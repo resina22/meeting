@@ -1,0 +1,43 @@
+mat-list {
+  padding: 0px;
+}
+
+mat-list-item {
+  padding: 5px 0 !important;
+  border-bottom: 1px solid rgba(132, 132, 132, 0.1);
+}
+
+mat-list-item:hover {
+  background-color: rgba(132, 132, 132, 0.05);
+}
+
+.img-profile {
+  border: 1px solid rgba(132, 132, 132, 0.4);
+  width: 50px;
+  height: 50px;
+  display: block;
+  object-fit: contain;
+  border-radius: 50%;
+}
+
+.list-messages {
+  overflow: auto;
+  max-height: calc(100% - 5px) !important;
+  min-height: calc(100% - 5px) !important;
+}
+
+.resume-text {
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.message > p {
+  padding:0px;
+  margin: 0px;
+}
+
+.link-message {
+  text-decoration: none;
+  color: #000;
+}

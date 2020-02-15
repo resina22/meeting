@@ -1,0 +1,40 @@
+<div
+  fxLayout="column"
+  fxFlexFill
+>
+  <div
+    fxFlex="100%"
+  >
+    <div class="list-messages" *ngIf="!findIsOpen">
+      <mat-list>
+        <mat-list-item
+          *ngFor="let message of [1]"
+        >
+          <a
+            class="link-message"
+            fxFlexFill
+            routerLink="10"
+            routerLinkActive="active"
+          >
+            <div fxFlex="60px">
+              <img
+                class="img-profile"
+                [src]="img"
+              >
+            </div>
+
+            <div fxFlex="89%" class="message">
+              <p><b>Nome</b></p>
+              <p class="resume-text">
+                Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has beenthe industry's standard
+              </p>
+              <p fxLayoutAlign="end">
+                <small>15/01/2020</small>
+              </p>
+            </div>
+          </a>
+        </mat-list-item>
+      </mat-list>
+    </div>
+  </div>
+</div>

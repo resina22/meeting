@@ -10,6 +10,7 @@ import { environment } from '../environments/environment';
 import { AppRoutingModule } from './app-routing.module';
 import { LayoutModule } from './layout/layout.module';
 import { SearchModule } from './search/search.module';
+import { ChatModule } from './chat/chat.module';
 import { FeedModule } from './feed/feed.module';
 import { AppComponent } from './app.component';
 
@@ -19,6 +20,7 @@ import { AppComponent } from './app.component';
   ],
   imports: [
     FeedModule,
+    ChatModule,
     LayoutModule,
     SearchModule,
     BrowserModule,
