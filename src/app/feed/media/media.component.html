@@ -1,0 +1,18 @@
+<div
+  class="media-publication"
+>
+  <a
+    routerLink="."
+    routerLinkActive="active"
+    class="link-media"
+    *ngFor="let img of imgs; index as idx"
+    (click)="openDialog()"
+  >
+    <img
+      mat-card-image
+      [src]="img"
+      alt="Describe"
+      class="img"
+    >
+  </a>
+</div>
