@@ -9,8 +9,9 @@ import { FlexLayoutModule } from '@angular/flex-layout';
 import { environment } from '../environments/environment';
 import { AppRoutingModule } from './app-routing.module';
 import { LayoutModule } from './layout/layout.module';
-import { AppComponent } from './app.component';
+import { SearchModule } from './search/search.module';
 import { FeedModule } from './feed/feed.module';
+import { AppComponent } from './app.component';
 
 @NgModule({
   declarations: [
@@ -19,6 +20,7 @@ import { FeedModule } from './feed/feed.module';
   imports: [
     FeedModule,
     LayoutModule,
+    SearchModule,
     BrowserModule,
     AppRoutingModule,
     FlexLayoutModule,
