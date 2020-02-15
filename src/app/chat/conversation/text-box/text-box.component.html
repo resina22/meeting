@@ -1,0 +1,49 @@
+<div
+  fxLayout="row"
+  fxLayoutAlign="center center"
+  class="text-box"
+>
+  <div
+    fxFlexFill
+    fxFlex="90%"
+    fxFlex.sm="80%"
+    fxFlex.xs="80%"
+  >
+    <mat-form-field class="clear-mat-field">
+      <textarea
+        class="textarea"
+        matInput
+        cdkTextareaAutosize
+        #autosize="cdkTextareaAutosize"
+        cdkAutosizeMinRows="1"
+        cdkAutosizeMaxRows="5"></textarea>
+    </mat-form-field>
+  </div>
+
+  <div
+    fxFlexFill
+    fxFlex="5%"
+    fxFlex.sm="10%"
+    fxFlex.xs="10%"
+  >
+    <button
+      mat-icon-button aria-label="Anexar"
+    >
+      <mat-icon>attach_file</mat-icon>
+    </button>
+  </div>
+
+  <div
+    fxFlexFill
+    fxFlex="5%"
+    fxFlex.sm="10%"
+    fxFlex.xs="10%"
+  >
+    <button
+      mat-icon-button aria-label="Enviar"
+      class=""
+    >
+      <mat-icon>send</mat-icon>
+    </button>
+  </div>
+</div>

@@ -1,0 +1,43 @@
+.text-box {
+  border-top: 0.5px solid rgba(97, 97, 97, 0.5);
+  border-bottom: 0.5px solid rgba(97, 97, 97, 0.5);
+}
+
+::ng-deep .clear-mat-field .mat-form-field-wrapper {
+  padding: 0px !important;
+  margin: 0px !important;
+}
+
+::ng-deep .clear-mat-field .mat-form-field-underline {
+  display: none;
+}
+
+::ng-deep .clear-mat-field.mat-form-field {
+  box-sizing: content-box !important;
+  outline: none !important;
+  border: 0px !important;
+  margin: 0px !important;
+  resize: none !important;
+  width: 100% !important;
+}
+
+::ng-deep .clear-mat-field .mat-form-field-infix {
+  border: 0px !important;
+}
+
+.textarea {
+  padding: 0 5px !important;
+}
+
+.textarea::-webkit-scrollbar-track,
+.textarea::-webkit-scrollbar
+{
+  border-radius: 50px;
+  width: 6px;
+	background-color: rgb(200, 200, 200);
+}
+
+.textarea::-webkit-scrollbar-thumb {
+  border-radius: 50px;
+	background-color: rgb(97, 97, 97);
+}
