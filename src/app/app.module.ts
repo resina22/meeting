@@ -6,6 +6,7 @@ import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 import { ServiceWorkerModule } from '@angular/service-worker';
 import { FlexLayoutModule } from '@angular/flex-layout';
 
+import { NotificationModule } from './notification/notification.module';
 import { environment } from '../environments/environment';
 import { AppRoutingModule } from './app-routing.module';
 import { LayoutModule } from './layout/layout.module';
@@ -26,6 +27,7 @@ import { AppComponent } from './app.component';
     BrowserModule,
     AppRoutingModule,
     FlexLayoutModule,
+    NotificationModule,
     BrowserAnimationsModule,
     MatProgressSpinnerModule,
     ServiceWorkerModule.register('ngsw-worker.js', { enabled: environment.production })

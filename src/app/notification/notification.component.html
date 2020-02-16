@@ -1,0 +1,32 @@
+<div
+  fxLayout="row wrap"
+  class="container"
+>
+  <div
+    fxFlex="100%"
+    fxFlexFill
+    class="notification"
+    *ngFor="let notification of notifications"
+  >
+    <div
+      fxLayout="start center"
+      fxFlex="95%"
+    >
+      <span fxFlexAlign="center">notification</span>
+    </div>
+
+    <div fxFlex="5%">
+      <button
+        [matMenuTriggerFor]="opcoes"
+        mat-icon-button
+        aria-label="Opções"
+      >
+        <mat-icon>more_vert</mat-icon>
+      </button>
+      <mat-menu #opcoes="matMenu">
+        <button mat-menu-item>Remover</button>
+        <button mat-menu-item>Visualizar</button>
+      </mat-menu>
+    </div>
+  </div>
+</div>
