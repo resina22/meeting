@@ -5,6 +5,10 @@
   <div
     fxFlex="100%"
   >
+    <div *ngIf="findIsOpen">
+      <app-find-contact (findContactEmitter)="closeFindContact()"></app-find-contact>
+    </div>
+
     <div class="list-messages" *ngIf="!findIsOpen">
       <mat-list>
         <mat-list-item

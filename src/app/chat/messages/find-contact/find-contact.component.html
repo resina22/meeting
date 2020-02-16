@@ -1,0 +1,33 @@
+<div class="find-contact-container">
+  <div>
+    <mat-form-field fxFlexFill class="field-find-contact">
+      <input matInput type="text" placeholder="Buscar contato" value="" #inputFindContact>
+      <button
+        mat-button
+        matSuffix
+        mat-icon-button
+        matTooltip="Fechar busca"
+        aria-label="Fechar busca"
+        (click)="closeFindContact()"
+      >
+        <mat-icon>close</mat-icon>
+      </button>
+    </mat-form-field>
+  </div>
+
+  <div class="container-result">
+    <mat-list role="Contatos">
+      <mat-list-item role="Contato" *ngFor="let contact of contacts">
+        <a routerLink="{{contact.id}}" routerLinkActive="active" class="link-contact" fxFlexFill>
+          <div fxFlex="60px">
+            <img [src]=contact.img class="img-profile">
+          </div>
+
+          <div fxFlex="89%" >
+            <p><b>{{contact.name}}</b></p>
+          </div>
+        </a>
+      </mat-list-item>
+    </mat-list>
+  </div>
+</div>
