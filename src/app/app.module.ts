@@ -8,6 +8,7 @@ import { FlexLayoutModule } from '@angular/flex-layout';
 
 import { NotificationModule } from './notification/notification.module';
 import { environment } from '../environments/environment';
+import { ProfileModule } from './profile/profile.module';
 import { AppRoutingModule } from './app-routing.module';
 import { LayoutModule } from './layout/layout.module';
 import { SearchModule } from './search/search.module';
@@ -27,6 +28,7 @@ import { AppComponent } from './app.component';
     LayoutModule,
     SharedModule,
     SearchModule,
+    ProfileModule,
     BrowserModule,
     AppRoutingModule,
     FlexLayoutModule,
