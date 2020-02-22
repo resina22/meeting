@@ -1,42 +1,35 @@
-import { OnInit, OnDestroy, Component, AfterViewInit } from '@angular/core';
 import {
-  Router,
-  NavigationStart,
-  NavigationCancel,
-  NavigationEnd
+  Router, NavigationStart, NavigationCancel, NavigationEnd
 } from '@angular/router';
+import { OnInit, Component } from '@angular/core';
+
+import { Subscription } from 'rxjs';
+
+import { LoadService } from './shared/load/load.service';
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss']
 })
-export class AppComponent  implements OnInit, OnDestroy, AfterViewInit {
-  public loading = false;
-  private loadingSubscribe;
-
+export class AppComponent  implements OnInit {
+  private loadingSubscribe: Subscription;
   constructor(
-    private router: Router
+    private router: Router,
+    private loadService: LoadService
   ) {}
 
   ngOnInit() {
-    this.loading = true;
-  }
-
-  ngOnDestroy() {
-    this.loadingSubscribe.unsubscribe();
-  }
-
-  ngAfterViewInit() {
     this.loadingSubscribe = this.router.events.subscribe((event) => {
       if (event instanceof NavigationStart) {
-        this.loading = true;
+        this.loadService.toggle();
       } else if (
         event instanceof NavigationEnd ||
         event instanceof NavigationCancel
       ) {
-        this.loading = false;
+        this.loadService.toggle();
       }
     });
   }
+
 }

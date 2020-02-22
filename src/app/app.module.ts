@@ -11,8 +11,10 @@ import { environment } from '../environments/environment';
 import { AppRoutingModule } from './app-routing.module';
 import { LayoutModule } from './layout/layout.module';
 import { SearchModule } from './search/search.module';
+import { SharedModule } from './shared/shared.module';
 import { ChatModule } from './chat/chat.module';
 import { FeedModule } from './feed/feed.module';
+
 import { AppComponent } from './app.component';
 
 @NgModule({
@@ -23,6 +25,7 @@ import { AppComponent } from './app.component';
     FeedModule,
     ChatModule,
     LayoutModule,
+    SharedModule,
     SearchModule,
     BrowserModule,
     AppRoutingModule,
