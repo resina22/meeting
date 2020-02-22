@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
+
+import { TopbarService } from 'src/app/layout/topbar/topbar.service';
 
 @Component({
   selector: 'app-messages',
@@ -8,9 +11,15 @@ import { Component, OnInit } from '@angular/core';
 export class MessagesComponent implements OnInit {
   findIsOpen = false;
   img = 'https://generated.photos/vue-static/home/hero/4.png';
-  constructor() { }
+  constructor(
+    private route: ActivatedRoute,
+    private topbarService: TopbarService
+  ) { }
 
   ngOnInit(): void {
+    this.topbarService.title(
+      this.route.snapshot.data.title
+    );
   }
 
   closeFindContact() {

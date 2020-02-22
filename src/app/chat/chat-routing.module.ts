@@ -6,7 +6,7 @@ import { MessagesComponent } from './messages/messages.component';
 
 const CHAT_ROUTES: Routes = [
   { path: 'chat', component: MessagesComponent, data: {title: 'Mensagens'} },
-  { path: 'chat/:id', component: ChatComponent, data: {title: 'Chat'} }
+  { path: 'chat/:id', component: ChatComponent, data: {title: 'Mensagem'} }
 ];
 
 @NgModule({
