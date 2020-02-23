@@ -1,0 +1,54 @@
+<div
+  fxLayout="row wrap"
+  class="profile"
+>
+  <div
+    fxFlexFill
+    fxFlex="99%"
+    class="interests-container"
+  >
+    <div>
+      <mat-form-field fxFlexFill>
+        <input
+          type="text"
+          placeholder="Buscar interesses"
+          aria-label="Buscar interesses"
+          matInput
+          [formControl]="interestControl"
+          [matAutocomplete]="auto"
+          #interestInput
+        >
+        <mat-autocomplete
+          #auto="matAutocomplete"
+          (optionSelected)="selected($event)"
+        >
+          <mat-option *ngFor="let interests of filteredInterests | async" [value]="interests">
+            {{interests}}
+          </mat-option>
+        </mat-autocomplete>
+      </mat-form-field>
+    </div>
+    <div>
+      <mat-chip-list aria-label="Interesses">
+        <mat-chip
+          color="accent"
+          selected
+          *ngFor="let interest of interests"
+        >
+          {{interest}}
+          <mat-icon
+            matChipRemove
+            (click)="removeInterest(interest)"
+          >cancel</mat-icon>
+        </mat-chip>
+      </mat-chip-list>
+    </div>
+  </div>
+</div>
+
+<div
+  fxLayout="row wrap"
+  fxLayoutAlign="flex-end"
+>
+  <button mat-raised-button color="accent">Salvar</button>
+</div>

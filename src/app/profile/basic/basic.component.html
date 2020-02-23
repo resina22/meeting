@@ -1,0 +1,89 @@
+<div
+  fxLayout="row wrap"
+>
+  <div
+    fxFlexFill
+    fxFlex="100%"
+    class="basic-container"
+  >
+    <form
+      enctype="multipart/form-data"
+      [formGroup]="profileForm"
+    >
+      <div
+        fxLayoutAlign="center center"
+      >
+        <a
+          routerLink="."
+          class="btn-change-img"
+          (click)="profileImage.click()"
+        >
+          <img
+            class="img-profile"
+            *ngIf="previewProfileImage;else elseImg"
+            src={{previewProfileImage}}
+          >
+          <ng-template #elseImg>
+            <mat-icon class="elseImg">photo_camera</mat-icon>
+          </ng-template>
+        </a>
+
+        <input
+          type="file"
+          name="profileImage"
+          #profileImage
+          hidden
+          formControlName="profileImage"
+          (change)="changeProfileImage($event)"
+          accept="image/png, image/jpeg, image/jpg"
+        >
+      </div>
+
+      <div
+        fxLayout="row wrap"
+        fxLayoutGap="2%"
+      >
+        <mat-form-field
+          fxFlex="64%"
+          fxFlex.xs="100%"
+        >
+          <input matInput placeholder="Nome">
+        </mat-form-field>
+
+        <mat-form-field
+          fxFlex="32%"
+          fxFlex.xs="100%"
+        >
+          <input matInput [matDatepicker]="picker" placeholder="Data nascimento">
+          <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+          <mat-datepicker #picker></mat-datepicker>
+        </mat-form-field>
+
+        <mat-form-field
+          fxFlex="31.3%"
+          fxFlex.xs="100%"
+        >
+          <input
+          matInput
+          placeholder="Número celular"
+        >
+        </mat-form-field>
+
+        <mat-form-field
+          fxFlex="31.3%"
+          fxFlex.xs="98%"
+        >
+          <input matInput type="password" placeholder="Senha">
+        </mat-form-field>
+      </div>
+
+      <div
+        fxLayout="row wrap"
+        fxLayoutAlign="flex-end"
+      >
+        <button mat-raised-button color="accent">Salvar</button>
+      </div>
+    </form>
+  </div>
+
+</div>

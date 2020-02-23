@@ -1,0 +1,93 @@
+<div
+  fxLayout="row wrap"
+  class="profile"
+>
+  <div
+    fxFlexFill
+    fxFlex="99%"
+  >
+    <form>
+      <div>
+        <mat-form-field fxFlexFill class="input-search">
+          <input
+            type="text"
+            placeholder="Buscar local"
+            aria-label="buscar local"
+            matInput
+            [matAutocomplete]="auto"
+            [formControl]="locationControl"
+            #searchLocation
+          >
+          <mat-autocomplete
+            #auto="matAutocomplete"
+            (optionSelected)="selected($event)"
+          >
+            <mat-option *ngFor="let location of filteredLocations | async" [value]="location">
+              {{location}}
+            </mat-option>
+          </mat-autocomplete>
+        </mat-form-field>
+      </div>
+
+      <div *ngIf="searchLocation.value">
+        <span><b>Associar local aos seus interesses</b></span>
+        <div class="list-interests">
+          <mat-list>
+            <mat-list-item *ngIf="!fakeInterests.length" fxLayoutAlign="center">
+              <div fxFlexFill fxFlex="100%">
+                Sem resultados
+              </div>
+            </mat-list-item >
+            <mat-list-item *ngFor="let interest of fakeInterests">
+              <div fxFlexFill fxFlex="98%">
+              {{interest}}
+              </div>
+              <div>
+                <button
+                  mat-icon-button
+                  aria-label="Associar interesse"
+                  (click)="associat(interest)"
+                >
+                  <mat-icon>check</mat-icon>
+                </button>
+              </div>
+            </mat-list-item>
+          </mat-list>
+        </div>
+      </div>
+
+      <div class="list-locations">
+        <mat-accordion>
+          <mat-expansion-panel *ngFor="let location of locations">
+            <mat-expansion-panel-header>
+              <mat-panel-title>
+                {{location.locale}}
+              </mat-panel-title>
+            </mat-expansion-panel-header>
+
+            <mat-chip-list aria-label="Interesses">
+              <mat-chip
+                color="accent"
+                selected
+                *ngFor="let interest of location.interests"
+              >
+                {{interest}}
+                <mat-icon
+                  matChipRemove
+                  (click)="disassociate(interest, searchLocation.value)"
+                >cancel</mat-icon>
+              </mat-chip>
+            </mat-chip-list>
+          </mat-expansion-panel>
+        </mat-accordion>
+      </div>
+    </form>
+  </div>
+</div>
+
+<div
+  fxLayout="row wrap"
+  fxLayoutAlign="flex-end"
+>
+  <button mat-raised-button color="accent">Salvar</button>
+</div>

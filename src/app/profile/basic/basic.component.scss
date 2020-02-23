@@ -1,0 +1,25 @@
+.basic-container {
+  padding: 10px 0;
+}
+
+.btn-change-img {
+  text-decoration: none;
+  margin-bottom: 3%;
+}
+
+.img-profile {
+  border: 1px solid rgba(132, 132, 132, 0.4);
+  width: 25vh;
+  height: 25vh;
+  display: block;
+  object-fit: contain;
+  border-radius: 50%;
+}
+
+.elseImg {
+  padding: 10vh;
+  border: 1px solid rgba(132, 132, 132, 0.4);
+  color: #848484;
+  display: block;
+  border-radius: 50%;
+}
