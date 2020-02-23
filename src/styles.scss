@@ -1,5 +1,8 @@
-@import './assets/roboto.css';
 @import './assets/icon.css';
 
 @import '~normalize.css';
 @import './theme.scss';
+
+body, html {
+  font-family: 'Roboto' !important;
+}
