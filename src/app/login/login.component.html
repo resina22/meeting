@@ -1,0 +1,62 @@
+<div class="login-background"></div>
+
+<div
+  fxLayoutAlign="center center"
+  class="container"
+  fxLayout="row"
+>
+  <mat-card
+    class="login"
+    fxFlex="60vh"
+    fxFlex.xs="80vw"
+    fxFlex.sm="80vw"
+  >
+    <div
+      fxLayout="column"
+      fxLayoutGap="27px"
+      fxLayoutGap.xs="0px"
+      fxLayoutGap.sm="0px"
+      fxLayoutAlign="center center"
+    >
+      <div class="profile-image">
+        <img [src]="imgProfile" *ngIf="imgProfile">
+      </div>
+
+      <mat-form-field
+        fxFlexFill
+      >
+        <mat-label>Usuário</mat-label>
+        <input type="text" matInput placeholder="E-mail/Telefone">
+      </mat-form-field>
+
+      <mat-form-field
+        fxFlexFill
+      >
+        <mat-label>Senha</mat-label>
+        <input type="password" matInput placeholder="Senha">
+      </mat-form-field>
+
+      <div
+        fxFlexFill
+        fxLayoutAlign="space-around"
+      >
+        <a mat-flat-button routerLink=".">Cadastre-se</a>
+
+        <button
+          mat-flat-button
+          color="accent"
+        >
+          Entrar
+        </button>
+      </div>
+
+      <div>
+        <a mat-flat-button routerLink=".">Recuperar senha</a>
+      </div>
+    </div>
+  </mat-card>
+</div>
+
+<div class="footer">
+  <p>&copy; Meeting | {{date | date:'yyyy'}}</p>
+</div>

@@ -1,8 +1,11 @@
+<router-outlet *ngIf="!logged"></router-outlet>
+
 <div
   fxLayout="row wrap"
   fxLayout.xs="column"
   fxLayout.sm="column"
   fxLayoutAlign="center center"
+  *ngIf="logged"
 >
   <div
     fxFlexFill

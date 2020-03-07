@@ -1,11 +1,12 @@
 import {
-  Router, NavigationStart, NavigationCancel, NavigationEnd
+  Router, NavigationStart, NavigationCancel, NavigationEnd, ActivatedRoute
 } from '@angular/router';
 import { OnInit, Component } from '@angular/core';
 
 import { Subscription } from 'rxjs';
 
 import { LoadService } from './shared/load/load.service';
+import { AuthService } from './auth/auth.service';
 
 @Component({
   selector: 'app-root',
@@ -14,10 +15,16 @@ import { LoadService } from './shared/load/load.service';
 })
 export class AppComponent  implements OnInit {
   private loadingSubscribe: Subscription;
+  readonly logged: boolean = false;
+
   constructor(
     private router: Router,
+    private auth: AuthService,
+    private route: ActivatedRoute,
     private loadService: LoadService
-  ) {}
+  ) {
+    this.logged = this.auth.isLogged;
+  }
 
   ngOnInit() {
     this.loadingSubscribe = this.router.events.subscribe((event) => {

@@ -1,0 +1,61 @@
+.footer {
+  background-color: rgba(0, 0, 0, 0.5);
+  position: fixed;
+  bottom: 0px;
+  margin: 0px auto;
+  text-align: center;
+  width: 100%;
+  color: #FFF;
+}
+
+.footer > p {
+  margin: 3px auto;
+}
+
+.login-background {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background:
+    -webkit-linear-gradient(315deg, hsla(217.06, 90.74%, 46.96%, 1) 0%, hsla(217.06, 90.74%, 46.96%, 0) 70%),
+    -webkit-linear-gradient(65deg, hsla(301.51, 97.59%, 41.35%, 1) 10%, hsla(301.51, 97.59%, 41.35%, 0) 80%),
+    -webkit-linear-gradient(135deg, hsla(261.3, 94.91%, 41.96%, 1) 15%, hsla(261.3, 94.91%, 41.96%, 0) 80%),
+    -webkit-linear-gradient(205deg, hsla(24.9, 99.66%, 47.03%, 1) 100%, hsla(24.9, 99.66%, 47.03%, 0) 70%);
+  background:
+    linear-gradient(135deg, hsla(217.06, 90.74%, 46.96%, 1) 0%, hsla(217.06, 90.74%, 46.96%, 0) 70%),
+    linear-gradient(25deg, hsla(301.51, 97.59%, 41.35%, 1) 10%, hsla(301.51, 97.59%, 41.35%, 0) 80%),
+    linear-gradient(315deg, hsla(261.3, 94.91%, 41.96%, 1) 15%, hsla(261.3, 94.91%, 41.96%, 0) 80%),
+    linear-gradient(245deg, hsla(24.9, 99.66%, 47.03%, 1) 100%, hsla(24.9, 99.66%, 47.03%, 0) 70%);
+}
+
+.container {
+  overflow: none;
+  height: 100vh;
+}
+
+.login {
+  padding: 25px;
+  bottom: 5vh;
+}
+
+.profile-image {
+  background-image: url('../../assets/img/fake-profile-user.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 100px;
+  height: 100px;
+  border: solid 1px #585858;
+  display: block;
+  border-radius: 50%;
+}
+
+@media (max-width: 600px) and (orientation: landscape) {
+  .profile-image {
+    display: none;
+  }
+
+  .login {
+    bottom: 20px;
+  }
+}

@@ -14,9 +14,9 @@ import { AppRoutingModule } from './app-routing.module';
 import { LayoutModule } from './layout/layout.module';
 import { SearchModule } from './search/search.module';
 import { SharedModule } from './shared/shared.module';
+import { LoginModule } from './login/login.module';
 import { ChatModule } from './chat/chat.module';
 import { FeedModule } from './feed/feed.module';
-
 import { AppComponent } from './app.component';
 
 @NgModule({
@@ -26,6 +26,7 @@ import { AppComponent } from './app.component';
   imports: [
     FeedModule,
     ChatModule,
+    LoginModule,
     LayoutModule,
     SharedModule,
     SearchModule,
